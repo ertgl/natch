@@ -1,0 +1,5 @@
+Abstract
+=================================
+
+
+.. automodule:: natch.abstract

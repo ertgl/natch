@@ -1,0 +1,5 @@
+Hashers
+=================================
+
+
+.. automodule:: natch.hashers

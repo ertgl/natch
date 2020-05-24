@@ -2,7 +2,6 @@ from natch.core.globals import registry
 from natch.exceptions import NeverMatchesError
 
 
-
 class Decoration(object):
 
     @classmethod

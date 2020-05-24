@@ -25,6 +25,6 @@ def factorial(x):
     return x
 
 
-for i in [*range(-5, 0), *range(6)]:
+for i in range(-5, 6):
     result = factorial(i)
     print(i, result)

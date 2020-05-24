@@ -5,7 +5,10 @@
 __pycache__/
 *.py[cod]
 
-# PyPI artifacts.
+# Docs.
+/docs/build/
+
+# PyPI.
 /build/
 /dist/
 /natch.egg-info/
