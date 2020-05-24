@@ -2,11 +2,12 @@
 # -*- coding: UTF-8 -*-
 
 from setuptools import setup
+import natch
 
 
 setup(
     name='natch',
-    version='1.0.0',
+    version=natch.__version__,
     keywords='functional paradigm pattern matching',
     description='Pattern matching library.',
     license='MIT',

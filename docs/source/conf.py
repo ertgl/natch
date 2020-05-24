@@ -14,6 +14,8 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join('.', '..', '..')))
 
+import natch
+
 
 # -- Project information -----------------------------------------------------
 
@@ -22,7 +24,7 @@ copyright = ' Ertuğrul Noyan Keremoğlu'
 author = 'Ertuğrul Noyan Keremoğlu'
 
 # The full version, including alpha/beta/rc tags
-version = '1.0.0'
+version = natch.__version__
 release = version
 
 
@@ -73,7 +75,7 @@ html_show_sourcelink = False
 
 html_show_sphinx = False
 
-html_show_copyright = True
+html_show_copyright = False
 
 html_sidebars = {
     'index': [

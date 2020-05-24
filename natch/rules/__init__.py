@@ -1,3 +1,4 @@
+from natch.abstract import Rule
 from natch.rules.any import Any
 from natch.rules.any_of import AnyOf
 from natch.rules.all_of import AllOf

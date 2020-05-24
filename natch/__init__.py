@@ -1,3 +1,5 @@
+from natch.abstract import Rule
+from natch.core.decoration import Decoration
 from natch.exceptions import NeverMatchesError
 from natch.decorators import any
 from natch.decorators import any_of
@@ -27,6 +29,9 @@ from natch.rules import NotContains
 from natch.rules import Condition
 from natch.rules import Partial
 from natch.rules import Pattern
+
+
+__version__ = '1.0.1'
 
 
 __all__ = [
@@ -59,3 +64,6 @@ __all__ = [
     'Partial',
     'Pattern',
 ]
+
+
+make_rule_decorator = Decoration.make_rule_decorator
