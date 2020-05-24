@@ -1,0 +1,11 @@
+# Editor artifacts.
+/.idea/
+
+# Python artifacts.
+__pycache__/
+*.py[cod]
+
+# PyPI artifacts.
+/build/
+/dist/
+/natch.egg-info/
