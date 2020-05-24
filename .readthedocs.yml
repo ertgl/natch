@@ -9,5 +9,6 @@ sphinx:
   configuration: docs/conf.py
 
 formats:
-  - html
+  - htmlzip
   - pdf
+  - epub
