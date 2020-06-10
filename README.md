@@ -14,19 +14,12 @@ Pattern matching library.
 ### [Overview](#overview)
 <a name="overview"></a>
 
+Natch enables, but is not limited to, pattern matching in function headers with single or multi arities, by supporting linear or nested lookups including logical expressions; can be expanded by writing custom rule classes.
+
 
 **Conditional function headers:**
 
-````text
-Mathematical definition:
-
-x < 0 => f(x) = f(x * -1)
-x >= 0 => f(x) = x + 1
-````
-
 ````python
-# Natch:
-
 @natch.lt(0)
 def f(x):
   return f(x * -1)
@@ -35,6 +28,10 @@ def f(x):
 @natch.gte(0)
 def f(x):
   return x + 1
+
+>>> f(-1)
+>>> 2
+
 ````
 
 
@@ -44,8 +41,20 @@ See more [examples](https://natch.readthedocs.io/en/latest/guide/examples.html).
 ### [Installing](#installing)
 <a name="installing"></a>
 
-Install and update using [pip](https://pip.pypa.io/en/stable/quickstart/).
+Natch can be installed and updated using [pip](https://pip.pypa.io/en/stable/quickstart/).
 
 ```bash
 $ pip install -U natch
 ```
+
+
+### [Troubleshooting](#troubleshooting)
+<a name="troubleshooting"></a>
+
+
+- #### [RecursionError](#troubleshooting--recursion-error)
+<a name="troubleshooting--recursion-error"></a>
+
+> Python has a platform-dependent recursion limit. If your software requires too many nested function calls, it is recommended to avoid using recursive functions.
+> 
+> If you still need to follow recursive approach, you may need to [set recursion limit](https://docs.python.org/3/library/sys.html#sys.setrecursionlimit) as necessary.
