@@ -15,7 +15,10 @@ class Pattern(Rule):
             self.args.append(arg)
 
     def does_match(self, *args, **kwargs):
-        if len(self.args) != len(args):
+        len_args = len(args)
+        if len(kwargs):
+            len_args += 1
+        if len(self.args) != len_args:
             return False
         for rule_idx, arg in enumerate(args):
             rule = self.args[rule_idx]
