@@ -31,7 +31,7 @@ from natch.rules import Partial
 from natch.rules import Pattern
 
 
-__version__ = '1.0.3'
+__version__ = '1.0.4'
 
 
 __all__ = [

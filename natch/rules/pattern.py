@@ -16,13 +16,19 @@ class Pattern(Rule):
 
     def does_match(self, *args, **kwargs):
         len_args = len(args)
-        if len(kwargs):
+        check_kwargs = bool(len(kwargs))
+        if check_kwargs:
             len_args += 1
         if len(self.args) != len_args:
             return False
         for rule_idx, arg in enumerate(args):
             rule = self.args[rule_idx]
             has_match = rule.does_match(arg)
+            if not has_match:
+                return False
+        if check_kwargs:
+            rule = self.args[len_args - 1]
+            has_match = rule.does_match(kwargs)
             if not has_match:
                 return False
         return True
