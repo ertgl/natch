@@ -34,6 +34,11 @@ class PartialTest(unittest.TestCase):
                 print(test_data)
             self.assertEqual(result, expected)
 
+    def test__partial__does_match__with__kwargs(self):
+        partial = Partial(a=1)
+        result = partial.does_match(**{'a': 1})
+        self.assertEqual(result, True)
+
 
 if __name__ == '__main__':
     unittest.main()

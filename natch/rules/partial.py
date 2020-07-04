@@ -36,7 +36,7 @@ class Partial(Rule):
         return True
 
     def does_match(self, *args, **kwargs):
-        value = args[0]
+        value = args[0] if len(args) else kwargs
         check = self._does_match_object
         if isinstance(value, dict):
             check = self._does_match_dict
